@@ -1,27 +1,15 @@
 # BBEARSAirbnb
 
-Once all the prerequisites are fulfilled, clone the project by typing the following in terminal one line at a time :
 
-git clone https://github.com/MoralisWeb3/youtube-tutorials.git
-cd youtube-tutorials
-cd Airbnb-starter
+Binance Smart Chain
 
+Getting Started
+Install the latest version of the SDK:
 
-Then, install the dependencies by using npm or yarn :
+npm install @thirdweb-dev/sdk ethers@5
+Initialize the SDK and contract on your project:
 
-// using NPM
-npm install
+import { ThirdwebSDK } from "@thirdweb-dev/sdk/evm";
 
-// using Yarn
-yarn
-
-Now that the setup is done, you can open App.js where all the application routing is defined
-
-// App.js
-
-const App = () => {
-  return(  
-    <Route path="/" element={} />
-    <Route path="/rentals" element={} />   
-  )
-};
+const sdk = new ThirdwebSDK("binance");
+const contract = await sdk.getContract("0x340870b7A9714BF2fb866E96B678f64Ea0aEB2b4");
